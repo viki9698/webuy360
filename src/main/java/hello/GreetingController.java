@@ -4,9 +4,17 @@ import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.data.authentication.UserCredentials;
+import org.springframework.data.mongodb.MongoDbFactory;
+import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.SimpleMongoDbFactory;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.mongodb.Mongo;
+import com.mongodb.MongoURI;
 @RestController
 public class GreetingController {
 	private static final String template = "Hello, %s!";
@@ -14,14 +22,14 @@ public class GreetingController {
 	
 	@Autowired
 	private CustomerRepository repository;
-	
+
 	@RequestMapping("/greeting")
 	public List<Customer> greeting(@RequestParam(value="name",defaultValue="world") String name) {
 		//return new Greeting(counter.incrementAndGet(), String.format(template, name));
 		repository.deleteAll();
 
 		// save a couple of customers
-		repository.save(new Customer("Alice", "Smith"));
+		repository.save(new Customer("ÕÅÈð", "Smith"));
 		repository.save(new Customer("Bob", "Smith"));
 
 		// fetch all customers
