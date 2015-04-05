@@ -5,7 +5,7 @@
 
     <context-param>
         <param-name>contextConfigLocation</param-name>
-        <param-value>hello.Application</param-value>
+        <param-value>com.webuy360.Application</param-value>
     </context-param>
 
     <listener>

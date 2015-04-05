@@ -1,4 +1,4 @@
-package hello;
+package com.webuy360;
 
 import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
@@ -29,7 +29,7 @@ public class GreetingController {
 		repository.deleteAll();
 
 		// save a couple of customers
-		repository.save(new Customer("ÕÅÈð", "Smith"));
+		repository.save(new Customer("å¼ ç‘ž", "Smith"));
 		repository.save(new Customer("Bob", "Smith"));
 
 		// fetch all customers

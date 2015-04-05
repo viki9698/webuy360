@@ -1,4 +1,4 @@
-package hello;
+package com.webuy360;
 
 public class Greeting {
 	private final long id;
