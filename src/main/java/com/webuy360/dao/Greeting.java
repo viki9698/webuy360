@@ -1,4 +1,4 @@
-package com.webuy360;
+package com.webuy360.dao;
 
 public class Greeting {
 	private final long id;
